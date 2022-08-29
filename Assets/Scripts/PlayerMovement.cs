@@ -12,9 +12,14 @@ public class PlayerMovement : MonoBehaviour
     public float JumpHeight;
     public LayerMask GroundMask;
     public float Speed;
-    public float Gravity = -9.81f;
+    public float Gravity = -18;
+    public float body_X;
+    public float body_Y;
+    public float body_Z;
+    public float moveScalar;
 
     private Vector3 velocity;
+    private Vector3 move;
     private bool isGrounded = false;
 
     // Start is called before the first frame update
@@ -25,28 +30,47 @@ public class PlayerMovement : MonoBehaviour
         // Check if we are grounded
         isGrounded = Physics.CheckSphere(GroundCheck.position, GroundDistance, GroundMask);
 
-        if(true == isGrounded && velocity.y < 0)
+        if(isGrounded == true && velocity.y < 0)
         {
             // Not setting this to zero to ensure that the player levels out on the floor
-            velocity.y = -2f;
+            velocity.y = -2;
         }
 
         // Get x and y inputs from old input mapping
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        body_X = Input.GetAxis("Horizontal");
+        body_Z = Input.GetAxis("Vertical");
 
-        // Perform move
-        Vector3 move = transform.right * x + transform.forward * z;
-        Controller.Move(Speed * Time.deltaTime * move);
+        
+
 
         // Jump logic
-        if(Input.GetKeyDown(KeyCode.Space) && true == isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            velocity.y = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+            velocity.y = Mathf.Sqrt(JumpHeight * -2 * Gravity);
+        }
+
+        //Check if shift key held down
+        if(Input.GetKey(KeyCode.LeftShift) && isGrounded == true)
+        {
+            //Apply sprint if shift is down
+            Debug.Log("Trying to sprint. MoveScalar = " + moveScalar);
+            Controller.Move(MoveSpeed(moveScalar));
+        }
+        else
+        {
+            //regular movement
+            Debug.Log("Regular Movement");
+            Controller.Move(MoveSpeed());
         }
 
         // Apply Gravity
         velocity.y += Gravity * Time.deltaTime;
         Controller.Move(velocity * Time.deltaTime);
+    }
+
+    Vector3 MoveSpeed(float scalar = 1)
+    {
+        Debug.Log(scalar);
+        return ((Speed * Time.deltaTime * ( scalar * (transform.right * body_X + transform.forward * body_Z))));
     }
 }

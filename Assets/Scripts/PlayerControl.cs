@@ -6,6 +6,14 @@ public class PlayerControl : MonoBehaviour
 {
 
     public float MouseSensitivity;
+    public float currMouseX;
+    public float currMouseY;
+    public float prevMouseX = 1;
+    public float prevMouseY = 1;
+
+
+
+    public bool firstFrame = true;
 
     public Transform PlayerBody;
     public Transform PlayerCam;
@@ -17,19 +25,28 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
+        currMouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
+        currMouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
+        
+        //Pass over update if mouse hasn't moved
+        if (currMouseX != prevMouseX || currMouseY != prevMouseY)
+        {
+            PlayerBody.Rotate(Vector3.up, currMouseX);
 
-        PlayerBody.Rotate(Vector3.up, mouseX);
+            xRot -= currMouseY;
+            xRot = Mathf.Clamp(xRot, -90, 90);
 
-        xRot -= mouseY;
-        xRot = Mathf.Clamp(xRot, -90, 90);
+            transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
+        }
 
-        transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
+        
+        prevMouseX = currMouseX;
+        prevMouseY = currMouseY;
     }
 }

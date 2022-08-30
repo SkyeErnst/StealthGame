@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift) && isGrounded == true)
         {
             //Apply sprint if shift is down
-            Debug.Log("Trying to sprint. MoveScalar = " + moveScalar);
             Controller.Move(MoveSpeed(moveScalar));
         }
         else
@@ -70,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 MoveSpeed(float scalar = 1)
     {
-        Debug.Log(scalar);
         return ((Speed * Time.deltaTime * ( scalar * (transform.right * body_X + transform.forward * body_Z))));
     }
 }

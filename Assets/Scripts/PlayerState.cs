@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState
+public class PlayerState : MonoBehaviour
 {
+
+    public PlayerMovement PlayerMovementAccess;
     public float StealthFactor;
 
     void Update() 
     {
         //Get Light Level on Player
+
+        StealthFactor = (1 * PlayerMovementAccess.moveScalar);
+        if (PlayerMovementAccess.isCrouched) StealthFactor *= PlayerMovementAccess.crouchScalar;
 
         //Get Movement Scalar, slowness of crouched state derived from movement scalar
 

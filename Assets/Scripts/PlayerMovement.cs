@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float body_Y;
     public float body_Z;
 
-    private float moveScalar = 1f;
-    private float crouchScalar = 0.6f;
-    private bool isCrouched = false;
+    public float moveScalar = 1f;
+    public float crouchScalar = 0.6f;
+    public bool isCrouched = false;
     private const float moveScalarUpperLimit = 1.8f;
     private const float moveScalarLowerLimit = 1f;
 

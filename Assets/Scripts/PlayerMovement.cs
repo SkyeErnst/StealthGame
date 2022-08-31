@@ -12,13 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public float JumpHeight;
     public LayerMask GroundMask;
 
-
     public float Speed;
     public float Gravity = -18f;
     public float body_X;
     public float body_Y;
     public float body_Z;
-
 
     private float moveScalar = 1f;
     private float crouchScalar = 0.6f;
@@ -56,15 +54,18 @@ public class PlayerMovement : MonoBehaviour
             move.y = Mathf.Sqrt(JumpHeight * -2 * Gravity);
         }
 
+        //Crouch state control
         switch (Input.GetKeyDown(KeyCode.LeftControl))
         {
             case true:
                 isCrouched = isCrouched ? false : true;
                 break;
+            //if not crouched break out
             case false:
                 break;
         }
 
+        //run vs walk state
         switch (Input.GetKey(KeyCode.LeftShift))
         {
             case true:
@@ -75,10 +76,12 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
+        //crouch state, called functions modified player body height
         switch (isCrouched)
         {
             case true:
                 Crouch();
+                //While crouched, player movement is modified but still able to run
                 Controller.Move(MoveSpeed((moveScalar*crouchScalar)));
                 break;
             case false:
@@ -105,13 +108,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveScalar < moveScalarUpperLimit) moveScalar += 0.05f;
     }
-    
 
     void Walk()
     {
         if (moveScalar > moveScalarLowerLimit) moveScalar -= 0.05f;
     }
-
 
     void Crouch()
     {
@@ -122,5 +123,4 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Controller.height < standingHeight) Controller.height += 0.01f;
     }
-
 }

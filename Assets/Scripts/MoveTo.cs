@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class MoveTo : MonoBehaviour
 {
 
-    private PlayerControl playerControl;
-    private PlayerState playerState;
+    public PlayerControl playerControl;
+    public PlayerState playerState;
 
     private Transform goal;
     private NavMeshAgent agent;
@@ -25,7 +25,7 @@ public class MoveTo : MonoBehaviour
     void Update()
     {
 
-    playerIsSpotted = (spottingSkill > playerState.StealthFactor) ? true : false;  
+    playerIsSpotted = (spottingSkill < playerState.StealthFactor) ? true : false;  
 
     switch (playerIsSpotted)
         {

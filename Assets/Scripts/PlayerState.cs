@@ -6,7 +6,7 @@ public class PlayerState : MonoBehaviour
 {
 
     public PlayerMovement PlayerMovementAccess;
-    public float StealthFactor;
+    public float StealthFactor = 1;
 
     void Update() 
     {

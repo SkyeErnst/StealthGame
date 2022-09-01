@@ -28,9 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private float crouchedHeight = 1.7f / 2f;
     private Vector3 move;
     private bool isGrounded = false;
-    private float TransitionMovementSmoothing;
 
-    // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
@@ -73,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case false:
                 Walk();
-                break;
+                break; 
         }
 
         //crouch state, called functions modified player body height

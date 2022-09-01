@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6DBE9E70-B28C-43AA-A8DE-96ABD7A2E0B2}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{6DBE9E70-B28C-43AA-A8DE-96ABD7A2E0B2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="FightOrFlight" ID="{0CB54A22-AEAC-48D5-A22A-54FED6B9272D}"/>
+				<SwitchGroup Name="Base" ID="{BF2DFCC1-9C40-43EA-99E9-78000C654971}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MoveTo : MonoBehaviour
+public class AgentAI : MonoBehaviour
 {
 
+    //Imported Classes
     public PlayerControl playerControl;
     public PlayerState playerState;
 
+    //Agent attributes
     private Transform goal;
     private NavMeshAgent agent;
+    public FieldOfView sight;
 
-
+    //Skill check
     public float spottingSkill = 0.6f;
     public bool playerIsSpotted = false;
     private const float agentSpeedUpperLimit = 3f;
@@ -25,19 +28,24 @@ public class MoveTo : MonoBehaviour
     void Update()
     {
 
-    playerIsSpotted = (spottingSkill < playerState.StealthFactor) ? true : false;  
+        sight.FindTargets();
 
-    switch (playerIsSpotted)
+        switch (sight.perceptableTargets.Contains(playerControl))
         {
-            case true:
-                agent.destination = playerControl.PlayerBody.position;
-                Run();
-                break;
-            case false:
-                agent.destination = agent.transform.position;
-                Walk();
-                break; 
+            
         }
+
+        switch (playerIsSpotted)
+            {
+                case true:
+                    agent.destination = playerControl.PlayerBody.position;
+                    Run();
+                    break;
+                case false:
+                    agent.destination = agent.transform.position;
+                    Walk();
+                    break; 
+            }
     }
 
     void Run()
@@ -49,5 +57,4 @@ public class MoveTo : MonoBehaviour
     {
         if (agent.speed > agentSpeedLowerLimit) agent.speed -= 0.05f;
     }
-  
 }

@@ -29,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 move;
     private bool isGrounded = false;
 
+    void Start()
+    {
+        Controller.tag = "Player";
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -98,9 +103,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return ((Speed * Time.deltaTime * ( scalar * (transform.right * body_X + transform.forward * body_Z))));
     }
-
-    void Void()
-    {}
 
     void Run()
     {

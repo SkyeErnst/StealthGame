@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private float standingHeight = 1.7f;
     private float crouchedHeight = 1.7f / 2f;
     private Vector3 move;
-    private bool isGrounded = false;
+    public bool isGrounded = false;
 
     void Start()
     {

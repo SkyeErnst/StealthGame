@@ -15,8 +15,10 @@ public class AgentAI : MonoBehaviour
     private NavMeshAgent agent;
     public FieldOfView sight;
 
+
     //Skill check
-    public float spottingSkill = 0.6f;
+    public float spottingCheck;
+    public float spottingSkill = 0.3f;
     public bool playerIsSpotted = false;
     private const float agentSpeedUpperLimit = 3f;
     private const float agentSpeedLowerLimit = 2f;
@@ -29,11 +31,29 @@ public class AgentAI : MonoBehaviour
     {
 
         sight.FindTargets();
+        spottingCheck = playerState.StealthFactor;
 
-        switch (sight.perceptableTargets.Contains(playerControl))
+        //Sound Perception for modifying player detection
+        switch (sight.perceptableTargets.Contains(playerControl.PlayerBody))
         {
-            
+            case true:
+                break;
+            case false:
+                spottingCheck *= 0.5f;
+                break;
         }
+
+        //Visual Perception for modifying player detection
+        switch (sight.visibleTargets.Contains(playerControl.PlayerBody))
+        {
+            case true:
+                break;
+            case false:
+                spottingCheck *= 0.3f;
+                break;
+        }
+        
+        playerIsSpotted = (spottingSkill < (spottingCheck)) ? true : false;
 
         switch (playerIsSpotted)
             {

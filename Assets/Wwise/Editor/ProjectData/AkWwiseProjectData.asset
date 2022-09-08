@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c2660c6c7451e14e8af7d313af2479bb
     GuidInternal: 
-    m_lastTime: -8585396150096038042
-    List: []
+    m_lastTime: -8585390866305687872
+    List:
+    - name: Main
+      guid: fff4f061e032ee4f9da864d89c639caf
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c2660c6c7451e14e8af7d313af2479bb
+      - ElementName: Main
+        ObjectType: 7
+        guid: fff4f061e032ee4f9da864d89c639caf
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ac76a3661fc0334ca923645bfb007a47
     GuidInternal: 
-    m_lastTime: -8585396150096124813
-    List: []
+    m_lastTime: -8585390119220332288
+    List:
+    - name: AmbienceResume
+      guid: 852fd3b4a1c8364a9751da8529035bb8
+      id: 138832960
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ac76a3661fc0334ca923645bfb007a47
+      - ElementName: AmbienceResume
+        ObjectType: 3
+        guid: 852fd3b4a1c8364a9751da8529035bb8
+      Path: Events\Default Work Unit\AmbienceResume
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: FoFStart
+      guid: 27712d383447dc4eb555092a3caf053e
+      id: 1295469290
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ac76a3661fc0334ca923645bfb007a47
+      - ElementName: FoFStart
+        ObjectType: 3
+        guid: 27712d383447dc4eb555092a3caf053e
+      Path: Events\Default Work Unit\FoFStart
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: GameStart
+      guid: a3b816655ae829439ca03035f096d748
+      id: 4058101365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ac76a3661fc0334ca923645bfb007a47
+      - ElementName: GameStart
+        ObjectType: 3
+        guid: a3b816655ae829439ca03035f096d748
+      Path: Events\Default Work Unit\GameStart
+      maxAttenuation: 0
+      maxDuration: 106.666664
+      minDuration: 106.666664
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -108,8 +173,140 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 6cb917d513ed764393278b86a974ee85
     GuidInternal: 
-    m_lastTime: -8585396150096104824
-    List: []
+    m_lastTime: -8585390985481859491
+    List:
+    - name: AlertLevel
+      guid: 34825d14c86cfb4ebbbf981b8a7431cd
+      id: 1321250609
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6cb917d513ed764393278b86a974ee85
+      - ElementName: AlertLevel
+        ObjectType: 9
+        guid: 34825d14c86cfb4ebbbf981b8a7431cd
+      Path: States\Default Work Unit\AlertLevel
+      values:
+      - name: FoF
+        guid: a5223ae683d08f4c9185dd6da283beae
+        id: 1083137562
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: AlertLevel
+          ObjectType: 9
+          guid: 34825d14c86cfb4ebbbf981b8a7431cd
+        - ElementName: FoF
+          ObjectType: 8
+          guid: a5223ae683d08f4c9185dd6da283beae
+      - name: NoAlert
+        guid: a7f08bb2787200428c1490d31629490a
+        id: 713054966
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: AlertLevel
+          ObjectType: 9
+          guid: 34825d14c86cfb4ebbbf981b8a7431cd
+        - ElementName: NoAlert
+          ObjectType: 8
+          guid: a7f08bb2787200428c1490d31629490a
+      - name: None
+        guid: a99ea4962d40f74a9a3bda87708c5f89
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: AlertLevel
+          ObjectType: 9
+          guid: 34825d14c86cfb4ebbbf981b8a7431cd
+        - ElementName: None
+          ObjectType: 8
+          guid: a99ea4962d40f74a9a3bda87708c5f89
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Music_Level1
+      guid: 2113dbc5a05b0a4a96a95e01a84805ed
+      id: 2209143526
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6cb917d513ed764393278b86a974ee85
+      - ElementName: Music_Level1
+        ObjectType: 9
+        guid: 2113dbc5a05b0a4a96a95e01a84805ed
+      Path: States\Default Work Unit\Music_Level1
+      values:
+      - name: Base
+        guid: ee48df759020f14b96f084f577fc5b47
+        id: 1291433366
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: Music_Level1
+          ObjectType: 9
+          guid: 2113dbc5a05b0a4a96a95e01a84805ed
+        - ElementName: Base
+          ObjectType: 8
+          guid: ee48df759020f14b96f084f577fc5b47
+      - name: FightOrFlight
+        guid: c4c6f8740639d5438e88e60fb403a1bb
+        id: 1259773148
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: Music_Level1
+          ObjectType: 9
+          guid: 2113dbc5a05b0a4a96a95e01a84805ed
+        - ElementName: FightOrFlight
+          ObjectType: 8
+          guid: c4c6f8740639d5438e88e60fb403a1bb
+      - name: None
+        guid: a60efab5018c984aa80bd9dd2730db9f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6cb917d513ed764393278b86a974ee85
+        - ElementName: Music_Level1
+          ObjectType: 9
+          guid: 2113dbc5a05b0a4a96a95e01a84805ed
+        - ElementName: None
+          ObjectType: 8
+          guid: a60efab5018c984aa80bd9dd2730db9f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -122,7 +319,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 709ebe6d8cb2aa43a8de96abd7a2e0b2
     GuidInternal: 
-    m_lastTime: -8585396150096067943
+    m_lastTime: -8585396019742561843
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -136,10 +333,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: c46aaeba4d3f8941aa7ffb902b652455
     GuidInternal: 
-    m_lastTime: -8585396150095908030
+    m_lastTime: -8585390854000537087
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000d0000000e0000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

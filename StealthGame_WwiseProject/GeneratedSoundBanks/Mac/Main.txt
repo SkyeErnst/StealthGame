@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	138832960	AmbienceResume			\Default Work Unit\AmbienceResume	
+	1295469290	FoFStart			\Default Work Unit\FoFStart	
+	4058101365	GameStart			\Default Work Unit\GameStart	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1321250609	AlertLevel			\Default Work Unit\AlertLevel	
+
+State	ID	Name	State Group			Notes
+	713054966	NoAlert	AlertLevel			
+	748895195	None	AlertLevel			
+	1083137562	FoF	AlertLevel			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	431211211	NoAlert	AlertLevel	\Interactive Music Hierarchy\Default Work Unit\BGM_FoF		
+	722276184	FoF	AlertLevel	\Interactive Music Hierarchy\Default Work Unit\BGM_Ambiance		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	73456586	BGM_FightOrFlight_Connecter_01	F:\_PROGRAMING\C#\StealthGame\StealthGame_WwiseProject\.cache\Mac\SFX\BGM_FightOrFlight_Connecter_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM_FoF\BGM_FoF_Heavy_Bridge\BGM_FightOrFlight_Connecter_01		2048064
+	106667196	BGM_FightOrFlight_01	F:\_PROGRAMING\C#\StealthGame\StealthGame_WwiseProject\.cache\Mac\SFX\BGM_FightOrFlight_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM_FoF\BGM_FoF_Heavy\BGM_FightOrFlight_01		6144064
+	934415620	BGM_FightOrFlight_Connecter_00	F:\_PROGRAMING\C#\StealthGame\StealthGame_WwiseProject\.cache\Mac\SFX\BGM_FightOrFlight_Connecter_00_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM_FoF\BGM_FoF_Light_Bridge\BGM_FightOrFlight_Connecter_00		2048064
+	948251075	BGM_FightOrFlight_00	F:\_PROGRAMING\C#\StealthGame\StealthGame_WwiseProject\.cache\Mac\SFX\BGM_FightOrFlight_00_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM_FoF\BGM_FoF_Light\BGM_FightOrFlight_00		4096064
+	987095402	Ambience	F:\_PROGRAMING\C#\StealthGame\StealthGame_WwiseProject\.cache\Mac\SFX\Ambience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM_Ambiance\Level1\Ambience		20480064
+

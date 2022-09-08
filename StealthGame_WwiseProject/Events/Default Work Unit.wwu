@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{66A376AC-C01F-4C33-A923-645BFB007A47}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{66A376AC-C01F-4C33-A923-645BFB007A47}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{66A376AC-C01F-4C33-A923-645BFB007A47}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="GameStart" ID="{6516B8A3-E85A-4329-9CA0-3035F096D748}">
+					<ChildrenList>
+						<Action Name="" ID="{3FC3F837-1D26-4337-92F5-60BD12E25B86}" ShortID="561617512">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level1" ID="{2883E7BA-4E41-4D87-AE60-7C40DB3AEA09}" WorkUnitID="{F11D9CA3-1660-42FD-B4F1-8AED4CFA7D66}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B847747-8582-4D14-8A24-7A6F21C8D53E}" ShortID="649888025">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NoAlert" ID="{B28BF0A7-7278-4200-8C14-90D31629490A}" WorkUnitID="{D517B96C-ED13-4376-9327-8B86A974EE85}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FoFStart" ID="{382D7127-4734-4EDC-B555-092A3CAF053E}">
+					<ChildrenList>
+						<Action Name="" ID="{884C4082-3405-448F-ABD1-768459BEE84B}" ShortID="744738485">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FoF" ID="{E63A22A5-D083-4C8F-9185-DD6DA283BEAE}" WorkUnitID="{D517B96C-ED13-4376-9327-8B86A974EE85}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5AF3C05C-D943-4583-A6CC-6C12ED54172D}" ShortID="295481771">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM_FoF" ID="{2F128B56-F3CA-4FFC-9D85-F1641D6760BF}" WorkUnitID="{F11D9CA3-1660-42FD-B4F1-8AED4CFA7D66}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AmbienceResume" ID="{B4D32F85-C8A1-4A36-9751-DA8529035BB8}">
+					<ChildrenList>
+						<Action Name="" ID="{58382CC9-204E-4757-9A22-D05FECE07659}" ShortID="113133348">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NoAlert" ID="{B28BF0A7-7278-4200-8C14-90D31629490A}" WorkUnitID="{D517B96C-ED13-4376-9327-8B86A974EE85}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5581FA2D-1B68-4F08-B9CF-78C5645A5D0E}" ShortID="74179809">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM_FoF" ID="{2F128B56-F3CA-4FFC-9D85-F1641D6760BF}" WorkUnitID="{F11D9CA3-1660-42FD-B4F1-8AED4CFA7D66}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -10,6 +10,30 @@
 						<State Name="FightOrFlight" ID="{74F8C6C4-3906-43D5-8E88-E60FB403A1BB}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="AlertLevel" ID="{145D8234-6CC8-4EFB-BBBF-981B8A7431CD}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{96A49EA9-402D-4AF7-9A3B-DA87708C5F89}"/>
+						<State Name="FoF" ID="{E63A22A5-D083-4C8F-9185-DD6DA283BEAE}"/>
+						<State Name="NoAlert" ID="{B28BF0A7-7278-4200-8C14-90D31629490A}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="NoAlert" ID="{B28BF0A7-7278-4200-8C14-90D31629490A}"/>
+							<EndState Name="FoF" ID="{E63A22A5-D083-4C8F-9185-DD6DA283BEAE}"/>
+							<Time>0.5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="FoF" ID="{E63A22A5-D083-4C8F-9185-DD6DA283BEAE}"/>
+							<EndState Name="None" ID="{96A49EA9-402D-4AF7-9A3B-DA87708C5F89}"/>
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

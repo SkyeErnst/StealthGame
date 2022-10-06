@@ -21,13 +21,17 @@ public class FieldOfViewEditor : Editor
         Handles.color = Color.red;
         foreach(Transform visibleTarget in fow.visibleTargets)
         {
-            Handles.DrawLine(fow.transform.position, visibleTarget.position);
+            Vector3 adjust = visibleTarget.position;
+            adjust.y = adjust.y + 1.6f; //Offset to raycast to camera height roughly
+            Handles.DrawLine(fow.transform.position, adjust);
         }
 
         Handles.color = Color.yellow;
         foreach(Transform perceptableTarget in fow.perceptableTargets)
         {
-            Handles.DrawLine(fow.transform.position, perceptableTarget.position);
+            Vector3 adjust = perceptableTarget.position;
+            adjust.y = adjust.y + 1.6f;
+            Handles.DrawLine(fow.transform.position, adjust);
         }
     }
 }

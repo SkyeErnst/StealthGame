@@ -12,7 +12,7 @@ public class PlayerState : MonoBehaviour
     {
         //Get Light Level on Player
 
-        StealthFactor = (1 * PlayerMovementAccess.moveScalar * PlayerMovementAccess.Speed);
+        StealthFactor = (1 * PlayerMovementAccess.Speed);
         if (PlayerMovementAccess.isCrouched) StealthFactor *= PlayerMovementAccess.crouchScalar;
 
         //Get Movement Scalar, slowness of crouched state derived from movement scalar
